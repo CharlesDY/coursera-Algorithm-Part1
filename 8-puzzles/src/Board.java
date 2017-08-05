@@ -17,23 +17,20 @@ public class Board{
     public Board(int[][] blocks)
     {
         board = new int[blocks.length][blocks.length];
+
+
         for(int i=0;i<blocks.length;i++)
+        {
             for(int j=0;j<blocks.length;j++)
             {
                 board[i][j]=blocks[i][j];
-            }
-
-        for(int i=0;i<board.length;i++)
-        {
-            for(int j=0;j<board.length;j++)
-            {
-                if(board[i][j]==0)
+                if(blocks[i][j]==0)
                 {
                     zeroI=i;
                     zeroJ=j;
                     continue;
                 }
-                else if(board[i][j]!=i*board.length+j+1)
+                else if(blocks[i][j]!=i*blocks.length+j+1)
                 {
                     hammingDis++;
                     manhattanDis+=Math.abs((board[i][j]-1)/board.length-i)+Math.abs((board[i][j]-1)%board.length-j);
@@ -82,7 +79,12 @@ public class Board{
                 j2=(num2-1)%board.length;
             }
         }
-        int[][] newBoard=board.clone();
+
+        int[][] newBoard=new int[board.length][board.length];
+        for(int i=0;i<board.length;i++)
+            for(int j=0;j<board.length;j++)
+                newBoard[i][j]=board[i][j];
+
         int temp=newBoard[i1][j1];
         newBoard[i1][j1]=newBoard[i2][j2];
         newBoard[i2][j2]=temp;
