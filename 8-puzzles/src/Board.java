@@ -1,6 +1,6 @@
 import  java.lang.*;
 
-//import edu.princeton.cs.algs4.Queue;
+import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import java.util.*;
@@ -79,7 +79,6 @@ public class Board{
                 j2=(num2-1)%board.length;
             }
         }
-
         int[][] newBoard=new int[board.length][board.length];
         for(int i=0;i<board.length;i++)
             for(int j=0;j<board.length;j++)
@@ -165,12 +164,18 @@ public class Board{
     public static void main(String[] args)
     {
         int[][] test={{0,1,3},{4,2,5},{7,8,6}};
+        In in = new In(args[0]);
+        int N = in.readInt();
+        int[][] blocks = new int[N][N];
+        for (int i = 0; i < N; i++)
+            for (int j = 0; j < N; j++)
+                blocks[i][j] = in.readInt();
+        Board initial = new Board(blocks);
 
-        Board TestBoard=new Board(test);
-        StdOut.println(TestBoard.twin());
-        StdOut.println(TestBoard.hamming());
-        StdOut.println(TestBoard.manhattan());
-        for(Board temp:TestBoard.neighbors())
+        StdOut.println(initial.twin());
+        StdOut.println(initial.hamming());
+        StdOut.println(initial.manhattan());
+        for(Board temp:initial.neighbors())
             StdOut.println(temp);
     }// unit tests (not graded)
 }
