@@ -67,7 +67,7 @@ public class Board{
         int i2=(num2-1)/board.length;
         int j2=(num2-1)%board.length;
 
-        while(board[i1][j1]==0||board[i2][j2]==0||num1==num2)
+        while(board[i1][j1]==0||board[i2][j2]==0)
         {
             if(board[i1][j1]==0)
             {
