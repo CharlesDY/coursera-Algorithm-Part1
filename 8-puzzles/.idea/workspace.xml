@@ -15,27 +15,13 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+            <state relative-caret-position="260">
+              <caret line="69" column="60" lean-forward="false" selection-start-line="69" selection-start-column="60" selection-end-line="69" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#equals#0;class#Board#0" expanded="false" />
                 <element signature="method#neighbors#0;class#Board#0" expanded="false" />
-                <element signature="e#3308#3315#0" expanded="true" />
+                <element signature="e#3395#3402#0" expanded="true" />
                 <element signature="method#toString#0;class#Board#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Solver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Solver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="130" column="42" lean-forward="true" selection-start-line="124" selection-start-column="8" selection-end-line="130" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2429#2436#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -284,9 +270,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#equals#0;class#Board#0" expanded="false" />
             <element signature="method#neighbors#0;class#Board#0" expanded="false" />
-            <element signature="e#3308#3315#0" expanded="true" />
+            <element signature="e#3395#3402#0" expanded="true" />
             <element signature="method#toString#0;class#Board#0" expanded="false" />
           </folding>
         </state>
@@ -298,7 +283,9 @@
           <caret line="138" column="38" lean-forward="false" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2429#2436#0" expanded="true" />
+            <element signature="e#2756#2763#0" expanded="true" />
+            <element signature="e#3113#3114#0" expanded="true" />
+            <element signature="e#3161#3162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -309,9 +296,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#equals#0;class#Board#0" expanded="false" />
             <element signature="method#neighbors#0;class#Board#0" expanded="false" />
-            <element signature="e#3308#3315#0" expanded="true" />
+            <element signature="e#3395#3402#0" expanded="true" />
             <element signature="method#toString#0;class#Board#0" expanded="false" />
           </folding>
         </state>
@@ -323,7 +309,9 @@
           <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2429#2436#0" expanded="true" />
+            <element signature="e#2756#2763#0" expanded="true" />
+            <element signature="e#3113#3114#0" expanded="true" />
+            <element signature="e#3161#3162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -334,9 +322,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#equals#0;class#Board#0" expanded="false" />
             <element signature="method#neighbors#0;class#Board#0" expanded="false" />
-            <element signature="e#3308#3315#0" expanded="true" />
+            <element signature="e#3395#3402#0" expanded="true" />
             <element signature="method#toString#0;class#Board#0" expanded="false" />
           </folding>
         </state>
@@ -348,7 +335,9 @@
           <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2429#2436#0" expanded="true" />
+            <element signature="e#2756#2763#0" expanded="true" />
+            <element signature="e#3113#3114#0" expanded="true" />
+            <element signature="e#3161#3162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -372,24 +361,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="130" column="42" lean-forward="true" selection-start-line="124" selection-start-column="8" selection-end-line="130" selection-end-column="42" />
+        <state relative-caret-position="180">
+          <caret line="46" column="27" lean-forward="true" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2429#2436#0" expanded="true" />
+            <element signature="e#2756#2763#0" expanded="true" />
+            <element signature="e#3113#3114#0" expanded="true" />
+            <element signature="e#3161#3162#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+        <state relative-caret-position="260">
+          <caret line="69" column="60" lean-forward="false" selection-start-line="69" selection-start-column="60" selection-end-line="69" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#equals#0;class#Board#0" expanded="false" />
             <element signature="method#neighbors#0;class#Board#0" expanded="false" />
-            <element signature="e#3308#3315#0" expanded="true" />
+            <element signature="e#3395#3402#0" expanded="true" />
             <element signature="method#toString#0;class#Board#0" expanded="false" />
           </folding>
         </state>

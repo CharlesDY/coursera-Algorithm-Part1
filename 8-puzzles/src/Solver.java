@@ -1,8 +1,9 @@
 import edu.princeton.cs.algs4.MinPQ;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.Stack;
 import java.util.Comparator;
-import java.util.*;
+
 import java.lang.*;
 
 public class Solver {
@@ -10,18 +11,26 @@ public class Solver {
 
     private Node finalNode;
     private boolean solvable;
-    
+    private int moves=0;
+    private int movesTwin=0;
     private class Node {
         private Board board;
         private Node prevNode;
-        
-        public Node(Board board, Node prevNode) {
+        private int M_DIS;
+
+
+        public Node(Board board, Node prevNode,int M_DIS) {
             this.board = board;
             this.prevNode = prevNode;
+            this.M_DIS=M_DIS;
         }
     }
     
     public Solver(Board initial) {
+
+        if(initial==null)
+            throw new java.lang.IllegalArgumentException();
+
          MinPQ<Node> pq;
          MinPQ<Node> pqTwin;
         pq = new MinPQ<Node>(nodeComparator);
@@ -29,8 +38,8 @@ public class Solver {
 
         solvable = false;
 
-        Node node = new Node(initial, null);
-        Node nodeTwin = new Node(initial.twin(), null);
+        Node node = new Node(initial, null,initial.manhattan());
+        Node nodeTwin = new Node(initial.twin(), null,initial.manhattan());
 
         pq.insert(node);
         pqTwin.insert(nodeTwin);
@@ -40,16 +49,18 @@ public class Solver {
 
         while (!node.board.isGoal() && !nodeTwin.board.isGoal()) {
 
+            moves=node.M_DIS-node.board.manhattan()+1;
+            movesTwin=nodeTwin.M_DIS-nodeTwin.board.manhattan()+1;
             for (Board b : node.board.neighbors()) {
                 if (node.prevNode == null || !b.equals(node.prevNode.board)) {
-                    Node neighbor = new Node(b, node);
+                    Node neighbor = new Node(b, node,b.manhattan()+moves);
                     pq.insert(neighbor);
                 }
             }
 
             for (Board bTwin : nodeTwin.board.neighbors()) {
                 if (nodeTwin.prevNode == null || !bTwin.equals(nodeTwin.prevNode.board)) {
-                    Node neighbor = new Node(bTwin, nodeTwin);
+                    Node neighbor = new Node(bTwin, nodeTwin,bTwin.manhattan()+movesTwin);
                     pqTwin.insert(neighbor);
                 }
             }
@@ -73,15 +84,10 @@ public class Solver {
     
     // min number of moves to solve initial board; -1 if no solution
     public int moves() {
-        if (!solvable) return -1;
-        Node current = finalNode;
-        int moves = 0;
-
-        while (current.prevNode != null) {
-            moves++;
-            current = current.prevNode;
-        }
-        return moves;
+        if(this.isSolvable())
+            return finalNode.M_DIS-finalNode.board.manhattan();
+        else
+            return -1;
     }
     
 
@@ -101,21 +107,12 @@ public class Solver {
         return boards;
     }
 
-    private static int numMoves(Node node) {
-        int moves = 0;
-        Node current = node;
 
-        while (current.prevNode != null) {
-            moves++;
-            current = current.prevNode;
-        }
-        return moves;
-    }
 
     private Comparator<Node> nodeComparator = new Comparator<Node>() {   
         @Override
         public int compare(Node a, Node b) {
-            return a.board.manhattan() + numMoves(a) - b.board.manhattan() - numMoves(b);
+            return a.M_DIS - b.M_DIS;
         }
     };
     
@@ -138,6 +135,7 @@ public class Solver {
             StdOut.println("No solution possible");
         else {
             StdOut.println("Minimum number of moves = " + solver.moves());
+
             for (Board board : solver.solution())
                 StdOut.println(board);
         }

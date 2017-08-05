@@ -60,12 +60,14 @@ public class Board{
         int N=board.length*board.length;
         int num1=StdRandom.uniform(1,N);
         int num2=StdRandom.uniform(1,N);
+
+
         int i1=(num1-1)/board.length;
         int j1=(num1-1)%board.length;
         int i2=(num2-1)/board.length;
         int j2=(num2-1)%board.length;
 
-        while(board[i1][j1]==0||board[i2][j2]==0)
+        while(board[i1][j1]==0||board[i2][j2]==0||num1==num2)
         {
             if(board[i1][j1]==0)
             {
@@ -96,6 +98,8 @@ public class Board{
         if (y == null) return false;
         if (y.getClass() != this.getClass()) return false;
         Board that=(Board) y;
+        if(this.dimension()!=that.dimension())
+            return false;
         for(int i=0;i<board.length;i++)
         {
             for(int j=0;j<board.length;j++)
@@ -164,19 +168,21 @@ public class Board{
 
     public static void main(String[] args)
     {
-        int[][] test={{0,1,3},{4,2,5},{7,8,6}};
-        In in = new In(args[0]);
+        /*In in = new In(args[0]);
         int N = in.readInt();
         int[][] blocks = new int[N][N];
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 blocks[i][j] = in.readInt();
         Board initial = new Board(blocks);
+        */
+        int[][] test={{2,0},{1,3}};
 
-        StdOut.println(initial.twin());
-        StdOut.println(initial.hamming());
-        StdOut.println(initial.manhattan());
-        for(Board temp:initial.neighbors())
-            StdOut.println(temp);
+        Board testB=new Board(test);
+        StdOut.println(testB.twin());
+        //StdOut.println(initial.hamming());
+        //StdOut.println(initial.manhattan());
+        //for(Board temp:initial.neighbors())
+          //  StdOut.println(temp);
     }// unit tests (not graded)
 }
