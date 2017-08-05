@@ -60,26 +60,26 @@ public class Board{
     }// is this board the goal board?
     public Board twin()
     {
-        int num1=StdRandom.uniform(1,9);
-        int num2=StdRandom.uniform(1,9);
-        int i1=num1/board.length;
-        int j1=num1%board.length-1;
-        int i2=num2/board.length;
-        int j2=num2%board.length-1;
+        int num1=StdRandom.uniform(1,10);
+        int num2=StdRandom.uniform(1,10);
+        int i1=(num1-1)/board.length;
+        int j1=(num1-1)%board.length;
+        int i2=(num2-1)/board.length;
+        int j2=(num2-1)%board.length;
 
         while(board[i1][j1]==0||board[i2][j2]==0)
         {
             if(board[i1][j1]==0)
             {
-                 num1=StdRandom.uniform(9);
-                 i1=num1/board.length;
-                 j1=num1%board.length-1;
+                 num1=StdRandom.uniform(1,10);
+                 i1=(num1-1)/board.length;
+                 j1=(num1-1)%board.length;
             }
             if(board[i2][j2]==0)
             {
-                num2=StdRandom.uniform(9);
-                i2=num2/board.length;
-                j2=num2%board.length-1;
+                num2=StdRandom.uniform(1,10);
+                i2=(num2-1)/board.length;
+                j2=(num2-1)%board.length;
             }
         }
         int[][] newBoard=board.clone();
@@ -165,11 +165,10 @@ public class Board{
         int[][] test={{0,1,3},{4,2,5},{7,8,6}};
 
         Board TestBoard=new Board(test);
-        StdOut.println(TestBoard.zeroI);
-        StdOut.println(TestBoard.zeroJ);
-        for(Board neigh:TestBoard.neighbors())
-        {
-            StdOut.println(neigh);
-        }
+        StdOut.println(TestBoard.twin());
+        StdOut.println(TestBoard.hamming());
+        StdOut.println(TestBoard.manhattan());
+        for(Board temp:TestBoard.neighbors())
+            StdOut.println(temp);
     }// unit tests (not graded)
 }

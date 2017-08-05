@@ -26,42 +26,44 @@ public class Solver {
          MinPQ<Node> pqTwin;
         pq = new MinPQ<Node>(nodeComparator);
         pqTwin = new MinPQ<Node>(nodeComparator);
-        
+
         solvable = false;
-        
+
         Node node = new Node(initial, null);
         Node nodeTwin = new Node(initial.twin(), null);
-        
+
         pq.insert(node);
         pqTwin.insert(nodeTwin);
-        
+
         node = pq.delMin();
         nodeTwin = pqTwin.delMin();
-        
+
         while (!node.board.isGoal() && !nodeTwin.board.isGoal()) {
 
-            for (Board b : node.board.neighbors()) { 
+            for (Board b : node.board.neighbors()) {
                 if (node.prevNode == null || !b.equals(node.prevNode.board)) {
                     Node neighbor = new Node(b, node);
                     pq.insert(neighbor);
                 }
             }
-            
+
             for (Board bTwin : nodeTwin.board.neighbors()) {
                 if (nodeTwin.prevNode == null || !bTwin.equals(nodeTwin.prevNode.board)) {
                     Node neighbor = new Node(bTwin, nodeTwin);
                     pqTwin.insert(neighbor);
                 }
             }
-            
+
             node = pq.delMin();
             nodeTwin = pqTwin.delMin();
         }
-        
+
         if (node.board.isGoal()) {
-            solvable = true; 
+            solvable = true;
             finalNode = node;
-        }  
+        }
+
+
     }
 
     // is the initial board solvable?
@@ -74,7 +76,7 @@ public class Solver {
         if (!solvable) return -1;
         Node current = finalNode;
         int moves = 0;
-        
+
         while (current.prevNode != null) {
             moves++;
             current = current.prevNode;
@@ -82,33 +84,34 @@ public class Solver {
         return moves;
     }
     
-    // to add number of moves to hamming or manhattan distance
-    private static int numMoves(Node node) {
-        int moves = 0;
-        Node current = node;
-        
-        while (current.prevNode != null) {
-            moves++;
-            current = current.prevNode;
-        }
-        return moves;
-    }
+
     
     // sequence of boards in a shortest solution; null if no solution
     public Iterable<Board> solution() {
         if (!solvable) return null;
-        
+
         Node current = finalNode;
         Stack<Board> boards = new Stack<Board>();
         boards.push(current.board);
-        
+
         while (current.prevNode != null) {
             boards.push(current.prevNode.board);
             current = current.prevNode;
         }
         return boards;
     }
-    
+
+    private static int numMoves(Node node) {
+        int moves = 0;
+        Node current = node;
+
+        while (current.prevNode != null) {
+            moves++;
+            current = current.prevNode;
+        }
+        return moves;
+    }
+
     private Comparator<Node> nodeComparator = new Comparator<Node>() {   
         @Override
         public int compare(Node a, Node b) {
