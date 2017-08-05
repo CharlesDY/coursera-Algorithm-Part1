@@ -15,13 +15,13 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="177" column="30" lean-forward="false" selection-start-line="177" selection-start-column="30" selection-end-line="177" selection-end-column="30" />
+            <state relative-caret-position="310">
+              <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#equals#0;class#Board#0" expanded="false" />
                 <element signature="method#neighbors#0;class#Board#0" expanded="false" />
-                <element signature="e#3271#3278#0" expanded="true" />
+                <element signature="e#3308#3315#0" expanded="true" />
                 <element signature="method#toString#0;class#Board#0" expanded="false" />
               </folding>
             </state>
@@ -286,7 +286,7 @@
             <element signature="imports" expanded="true" />
             <element signature="method#equals#0;class#Board#0" expanded="false" />
             <element signature="method#neighbors#0;class#Board#0" expanded="false" />
-            <element signature="e#3271#3278#0" expanded="true" />
+            <element signature="e#3308#3315#0" expanded="true" />
             <element signature="method#toString#0;class#Board#0" expanded="false" />
           </folding>
         </state>
@@ -311,7 +311,7 @@
             <element signature="imports" expanded="true" />
             <element signature="method#equals#0;class#Board#0" expanded="false" />
             <element signature="method#neighbors#0;class#Board#0" expanded="false" />
-            <element signature="e#3271#3278#0" expanded="true" />
+            <element signature="e#3308#3315#0" expanded="true" />
             <element signature="method#toString#0;class#Board#0" expanded="false" />
           </folding>
         </state>
@@ -336,7 +336,7 @@
             <element signature="imports" expanded="true" />
             <element signature="method#equals#0;class#Board#0" expanded="false" />
             <element signature="method#neighbors#0;class#Board#0" expanded="false" />
-            <element signature="e#3271#3278#0" expanded="true" />
+            <element signature="e#3308#3315#0" expanded="true" />
             <element signature="method#toString#0;class#Board#0" expanded="false" />
           </folding>
         </state>
@@ -383,13 +383,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="177" column="30" lean-forward="false" selection-start-line="177" selection-start-column="30" selection-end-line="177" selection-end-column="30" />
+        <state relative-caret-position="310">
+          <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#equals#0;class#Board#0" expanded="false" />
             <element signature="method#neighbors#0;class#Board#0" expanded="false" />
-            <element signature="e#3271#3278#0" expanded="true" />
+            <element signature="e#3308#3315#0" expanded="true" />
             <element signature="method#toString#0;class#Board#0" expanded="false" />
           </folding>
         </state>

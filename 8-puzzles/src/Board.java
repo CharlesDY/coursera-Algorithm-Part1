@@ -57,8 +57,9 @@ public class Board{
     }// is this board the goal board?
     public Board twin()
     {
-        int num1=StdRandom.uniform(1,10);
-        int num2=StdRandom.uniform(1,10);
+        int N=board.length*board.length;
+        int num1=StdRandom.uniform(1,N);
+        int num2=StdRandom.uniform(1,N);
         int i1=(num1-1)/board.length;
         int j1=(num1-1)%board.length;
         int i2=(num2-1)/board.length;
@@ -68,13 +69,13 @@ public class Board{
         {
             if(board[i1][j1]==0)
             {
-                 num1=StdRandom.uniform(1,10);
+                 num1=StdRandom.uniform(1,N);
                  i1=(num1-1)/board.length;
                  j1=(num1-1)%board.length;
             }
             if(board[i2][j2]==0)
             {
-                num2=StdRandom.uniform(1,10);
+                num2=StdRandom.uniform(1,N);
                 i2=(num2-1)/board.length;
                 j2=(num2-1)%board.length;
             }
