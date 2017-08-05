@@ -1,16 +1,28 @@
-import static java.lang.Math.abs;
-import edu.princeton.cs.algs4.StdRandom;
+import  java.lang.*;
 
-public class Board {
-    public int[][] board;
+//import edu.princeton.cs.algs4.Queue;
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
+import java.util.*;
+//import java.util.Iterator;
+//import java.util.LinkedList;
+//import java.util.NoSuchElementException;
+
+public class Board{
+    private int[][] board;
     private int hammingDis=0;
     private int manhattanDis=0;
     private int zeroI;
     private int zeroJ;
     public Board(int[][] blocks)
     {
-        //board = new int[blocks.length][blocks.length];
-        board=blocks.clone();
+        board = new int[blocks.length][blocks.length];
+        for(int i=0;i<blocks.length;i++)
+            for(int j=0;j<blocks.length;j++)
+            {
+                board[i][j]=blocks[i][j];
+            }
+
         for(int i=0;i<board.length;i++)
         {
             for(int j=0;j<board.length;j++)
@@ -21,10 +33,10 @@ public class Board {
                     zeroJ=j;
                     continue;
                 }
-                if(board[i][j]!=i*board.length+j+1)
+                else if(board[i][j]!=i*board.length+j+1)
                 {
                     hammingDis++;
-                    manhattanDis+=abs(board[i][j]/board.length-i)+abs(board[i][j]%board.length-j-1);
+                    manhattanDis+=Math.abs((board[i][j]-1)/board.length-i)+Math.abs((board[i][j]-1)%board.length-j);
                 }
             }
         }
@@ -48,8 +60,8 @@ public class Board {
     }// is this board the goal board?
     public Board twin()
     {
-        int num1=StdRandom.uniform(9);
-        int num2=StdRandom.uniform(9);
+        int num1=StdRandom.uniform(1,9);
+        int num2=StdRandom.uniform(1,9);
         int i1=num1/board.length;
         int j1=num1%board.length-1;
         int i2=num2/board.length;
@@ -94,12 +106,70 @@ public class Board {
 
     public Iterable<Board> neighbors()
     {
+        Stack<Board> stack = new Stack<Board>();
+        int col=zeroJ;
+        int row=zeroI;
+        int N=board.length;
+        int[][] dataTmp=board.clone();
+        if (col > 0) {
+            exch(dataTmp, row, col, row, col-1);
+            stack.push(new Board(dataTmp));
+            exch(dataTmp, row, col, row, col-1);
+        }
 
+        // shift with right
+        if (col < N-1) {
+            exch(dataTmp, row, col, row, col+1);
+            stack.push(new Board(dataTmp));
+            exch(dataTmp, row, col, row, col+1);
+        }
 
+        // shift with up
+        if (row > 0) {
+            exch(dataTmp, row, col, row-1, col);
+            stack.push(new Board(dataTmp));
+            exch(dataTmp, row, col, row-1, col);
+        }
 
+        // shift with down
+        if (row < N-1) {
+            exch(dataTmp, row, col, row+1, col);
+            stack.push(new Board(dataTmp));
+            exch(dataTmp, row, col, row+1, col);
+        }
+        return stack;
     }// all neighboring boards
-    public String toString()
-    {}// string representation of this board (in the output format specified below)
 
-    public static void main(String[] args) // unit tests (not graded)
+    private void exch(int[][] matrix, int i, int j, int p, int q) {
+        int tmp = matrix[i][j];
+        matrix[i][j] = matrix[p][q];
+        matrix[p][q] = tmp;
+    }
+
+    public String toString()
+    {
+        StringBuilder s = new StringBuilder();
+        s.append(board.length + "\n");
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                s.append(String.format("%2d ", board[i][j]));
+            }
+            s.append("\n");
+        }
+        return s.toString();
+    }// string representation of this board (in the output format specified below)
+
+
+    public static void main(String[] args)
+    {
+        int[][] test={{0,1,3},{4,2,5},{7,8,6}};
+
+        Board TestBoard=new Board(test);
+        StdOut.println(TestBoard.zeroI);
+        StdOut.println(TestBoard.zeroJ);
+        for(Board neigh:TestBoard.neighbors())
+        {
+            StdOut.println(neigh);
+        }
+    }// unit tests (not graded)
 }
