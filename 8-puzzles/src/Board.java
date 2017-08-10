@@ -58,26 +58,16 @@ public class Board{
     public Board twin()
     {
         int N=board.length*board.length;
-        int num1=1;
-        int num2=N-1;
+        int num1=StdRandom.uniform(1,N);
+        int num2=StdRandom.uniform(1,N);
+
 
         int i1=(num1-1)/board.length;
         int j1=(num1-1)%board.length;
         int i2=(num2-1)/board.length;
         int j2=(num2-1)%board.length;
 
-        if(board[i1][j1]==0||board[i2][j2]==0)
-        {
-            num1=2;
-            num2=N-1;
-            i1=(num1-1)/board.length;
-            j1=(num1-1)%board.length;
-            i2=(num2-1)/board.length;
-            j2=(num2-1)%board.length;
-        }
-
-
-        /*while(board[i1][j1]==0||board[i2][j2]==0)
+        while(board[i1][j1]==0||board[i2][j2]==0)
         {
             if(board[i1][j1]==0)
             {
@@ -91,7 +81,7 @@ public class Board{
                 i2=(num2-1)/board.length;
                 j2=(num2-1)%board.length;
             }
-        }*/
+        }
         int[][] newBoard=new int[board.length][board.length];
         for(int i=0;i<board.length;i++)
             for(int j=0;j<board.length;j++)
