@@ -2,8 +2,6 @@
 import edu.princeton.cs.algs4.*;
 
 
-
-
 public class PointSET {
     private RedBlackBST<Point2D,Integer> P_SET;
 
@@ -21,6 +19,7 @@ public class PointSET {
     }// number of points in the set
     public void insert(Point2D p)
     {
+        check(p);
         P_SET.put(p,1);
     }// add the point to the set (if it is not already in the set)
     public           boolean contains(Point2D p)
@@ -34,6 +33,8 @@ public class PointSET {
     }// draw all points to standard draw
     public Iterable<Point2D> range(RectHV rect)
     {
+        if(rect==null)
+            throw new IllegalArgumentException();
         Queue<Point2D> point2DQueue=new Queue<Point2D>();
         for(Point2D temp:P_SET.keys()) {
             if(rect.contains(temp))
@@ -43,18 +44,24 @@ public class PointSET {
     }// all points that are inside the rectangle (or on the boundary)
     public Point2D nearest(Point2D p)             // a nearest neighbor in the set to point p; null if the set is empty
     {
+        check(p);
         double minDis=2.0;
-        Point2D nearestPoint=new Point2D(0,0);
+        Point2D nearestPoint=null;
         for(Point2D temp:P_SET.keys())
         {
-            if(p.equals(temp))
-                continue;
             if(p.distanceSquaredTo(temp)<minDis)
             {
                 nearestPoint=temp;
+                minDis=p.distanceSquaredTo(temp);
             }
         }
         return nearestPoint;
+    }
+
+    private void check(Point2D p)
+    {
+        if(p==null)
+            throw new IllegalArgumentException();
     }
 
 
