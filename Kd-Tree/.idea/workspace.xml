@@ -15,18 +15,27 @@
       <file leaf-file-name="KdTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/KdTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="403" column="0" lean-forward="false" selection-start-line="403" selection-start-column="0" selection-end-line="416" selection-end-column="9" />
+            <state relative-caret-position="306">
+              <caret line="282" column="20" lean-forward="false" selection-start-line="282" selection-start-column="20" selection-end-line="282" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
                 <element signature="e#569#570#0" expanded="true" />
                 <element signature="e#609#610#0" expanded="true" />
-                <element signature="e#2117#2118#0" expanded="true" />
-                <element signature="e#2147#2148#0" expanded="true" />
-                <element signature="method#nearest#0;class#BST#0;class#KdTree#0" expanded="false" />
-                <element signature="method#searchNearest#0;class#BST#0;class#KdTree#0" expanded="false" />
-                <element signature="e#12369#12370#0" expanded="true" />
-                <element signature="e#12409#12410#0" expanded="true" />
+                <element signature="e#679#680#0" expanded="true" />
+                <element signature="e#712#713#0" expanded="true" />
+                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#863#864#0" expanded="true" />
+                <element signature="e#2136#2137#0" expanded="true" />
+                <element signature="e#2166#2167#0" expanded="true" />
+                <element signature="method#recurRange#0;class#BST#0;class#KdTree#0" expanded="false" />
+                <element signature="e#6446#6447#0" expanded="true" />
+                <element signature="e#6488#6489#0" expanded="true" />
+                <element signature="e#7836#7837#0" expanded="true" />
+                <element signature="e#7881#7882#0" expanded="true" />
+                <element signature="e#11447#11448#0" expanded="true" />
+                <element signature="e#11487#11488#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,8 +44,8 @@
       <file leaf-file-name="Point2D.java" pinned="false" current-in-tab="false">
         <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/algs4.jar!/edu/princeton/cs/algs4/Point2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1094">
-              <caret line="221" column="9" lean-forward="true" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
+            <state relative-caret-position="3546">
+              <caret line="221" column="9" lean-forward="false" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -45,8 +54,8 @@
       <file leaf-file-name="BST.java" pinned="false" current-in-tab="false">
         <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/algs4.jar!/edu/princeton/cs/algs4/BST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="141" column="5" lean-forward="true" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+            <state relative-caret-position="1386">
+              <caret line="141" column="5" lean-forward="false" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#BST#0" expanded="false" />
               </folding>
@@ -69,6 +78,8 @@
       <find>Value</find>
       <find>XOrder</find>
       <find>size</find>
+      <find>PointQue</find>
+      <find>Std</find>
     </findStrings>
     <replaceStrings>
       <replace>Point2D</replace>
@@ -97,7 +108,7 @@
     <option name="height" value="738" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -110,23 +121,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Kd-Tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-    </panes>
+    <panes />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -281,11 +276,56 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/KdTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#2136#2137#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="method#recurRange#0;class#BST#0;class#KdTree#0" expanded="false" />
+            <element signature="e#6446#6447#0" expanded="true" />
+            <element signature="e#6488#6489#0" expanded="true" />
+            <element signature="e#7836#7837#0" expanded="true" />
+            <element signature="e#7881#7882#0" expanded="true" />
+            <element signature="e#11447#11448#0" expanded="true" />
+            <element signature="e#11487#11488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/algs4.jar!/edu/princeton/cs/algs4/Point2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3978">
+          <caret line="221" column="9" lean-forward="true" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/algs4.jar!/edu/princeton/cs/algs4/BST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2538">
+          <caret line="141" column="5" lean-forward="true" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#BST#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PointSET.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -309,7 +349,7 @@
         <state relative-caret-position="180">
           <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -320,14 +360,23 @@
           <caret line="231" column="8" lean-forward="false" selection-start-line="231" selection-start-column="8" selection-end-line="231" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
             <element signature="e#569#570#0" expanded="true" />
             <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#2117#2118#0" expanded="true" />
-            <element signature="e#2147#2148#0" expanded="true" />
-            <element signature="method#nearest#0;class#BST#0;class#KdTree#0" expanded="false" />
-            <element signature="method#searchNearest#0;class#BST#0;class#KdTree#0" expanded="false" />
-            <element signature="e#12369#12370#0" expanded="true" />
-            <element signature="e#12409#12410#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#2136#2137#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="method#recurRange#0;class#BST#0;class#KdTree#0" expanded="false" />
+            <element signature="e#6446#6447#0" expanded="true" />
+            <element signature="e#6488#6489#0" expanded="true" />
+            <element signature="e#7836#7837#0" expanded="true" />
+            <element signature="e#7881#7882#0" expanded="true" />
+            <element signature="e#11447#11448#0" expanded="true" />
+            <element signature="e#11487#11488#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -346,14 +395,23 @@
           <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
             <element signature="e#569#570#0" expanded="true" />
             <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#2117#2118#0" expanded="true" />
-            <element signature="e#2147#2148#0" expanded="true" />
-            <element signature="method#nearest#0;class#BST#0;class#KdTree#0" expanded="false" />
-            <element signature="method#searchNearest#0;class#BST#0;class#KdTree#0" expanded="false" />
-            <element signature="e#12369#12370#0" expanded="true" />
-            <element signature="e#12409#12410#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#2136#2137#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="method#recurRange#0;class#BST#0;class#KdTree#0" expanded="false" />
+            <element signature="e#6446#6447#0" expanded="true" />
+            <element signature="e#6488#6489#0" expanded="true" />
+            <element signature="e#7836#7837#0" expanded="true" />
+            <element signature="e#7881#7882#0" expanded="true" />
+            <element signature="e#11447#11448#0" expanded="true" />
+            <element signature="e#11487#11488#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -377,8 +435,8 @@
     </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/algs4.jar!/edu/princeton/cs/algs4/BST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="141" column="5" lean-forward="true" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+        <state relative-caret-position="1386">
+          <caret line="141" column="5" lean-forward="false" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#BST#0" expanded="false" />
           </folding>
@@ -390,15 +448,15 @@
         <state relative-caret-position="360">
           <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/algs4.jar!/edu/princeton/cs/algs4/Point2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1094">
-          <caret line="221" column="9" lean-forward="true" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
+        <state relative-caret-position="3546">
+          <caret line="221" column="9" lean-forward="false" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -407,9 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -417,7 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -439,18 +493,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/KdTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="403" column="0" lean-forward="false" selection-start-line="403" selection-start-column="0" selection-end-line="416" selection-end-column="9" />
+        <state relative-caret-position="306">
+          <caret line="282" column="20" lean-forward="false" selection-start-line="282" selection-start-column="20" selection-end-line="282" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
             <element signature="e#569#570#0" expanded="true" />
             <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#2117#2118#0" expanded="true" />
-            <element signature="e#2147#2148#0" expanded="true" />
-            <element signature="method#nearest#0;class#BST#0;class#KdTree#0" expanded="false" />
-            <element signature="method#searchNearest#0;class#BST#0;class#KdTree#0" expanded="false" />
-            <element signature="e#12369#12370#0" expanded="true" />
-            <element signature="e#12409#12410#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#2136#2137#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="method#recurRange#0;class#BST#0;class#KdTree#0" expanded="false" />
+            <element signature="e#6446#6447#0" expanded="true" />
+            <element signature="e#6488#6489#0" expanded="true" />
+            <element signature="e#7836#7837#0" expanded="true" />
+            <element signature="e#7881#7882#0" expanded="true" />
+            <element signature="e#11447#11448#0" expanded="true" />
+            <element signature="e#11487#11488#0" expanded="true" />
           </folding>
         </state>
       </provider>
